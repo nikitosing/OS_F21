@@ -1,0 +1,16 @@
+    1  cd ~/OS_F21/week01/
+    2  grep -r "gcc" /usr/bin | sort -r > ex1.txt
+    3  ll
+    4  cat ex1.txt 
+    5  git status
+    6  history > ex2.txt
+    7  cat ex2.txt 
+    8  touch ex3.sh
+    9  vi ex3.sh 
+   10  sh ex3.sh 
+   11  gedit main.c
+   12  vi main.c
+   13  ll
+   14  gcc main.c -o ex4
+   15  ./ex4 
+   16  history > total_history.txt

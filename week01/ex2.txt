@@ -1,0 +1,6 @@
+    1  cd ~/OS_F21/week01/
+    2  grep -r "gcc" /usr/bin | sort -r > ex1.txt
+    3  ll
+    4  cat ex1.txt 
+    5  git status
+    6  history > ex2.txt
