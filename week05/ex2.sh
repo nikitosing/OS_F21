@@ -17,7 +17,7 @@ done
 echo "locked" > $lock_file
 
 count=$(tail -n 1 $file)
-count=count+1
+((count=count+1))
 echo $count >> $file
 
 rm $lock_file
