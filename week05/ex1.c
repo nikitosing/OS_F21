@@ -4,18 +4,18 @@
 #include <sys/types.h>
 
 void* threadFunction() {
-	printf("Hello from the thread #%d\n", pthread_self());
+	printf("Hello from the thread #%l\n", pthread_self());
 	return 0;
 }
 
 int main() {
 	int N = 5;
 	
-	pthread_t threads[N];
+	long threads[N];
 	
 	for(int i = 0; i < N; ++i) {
 		if(pthread_create(&threads[i], NULL, threadFunction, NULL) == 0) {
-			printf("Thread #%d has been created\n", threads[i]);
+			printf("Thread #%l has been created\n", threads[i]);
 		}
 		pthread_join(threads[i], NULL);
 	}
