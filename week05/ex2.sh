@@ -2,7 +2,7 @@
 
 file="ex2.txt"
 lock_file="${file}.lock"
-while true:
+while :
 do
 if [ ! -f $file ]
 then
