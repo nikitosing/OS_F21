@@ -5,6 +5,7 @@ struct proccess{
 	int arrival_time;
 	int burst_time;
 	int id;
+	int is_complete;
 };
 
 void swap(struct proccess* arr, int a, int b){
@@ -39,6 +40,7 @@ int main(){
 		printf("Input burst_time for [%d]: ", i);
 		scanf("%d", &array[i].burst_time);
 		array[i].id = i + 1;
+		array[i].is_complete = 0;
 	}
 	
 	bubble_sort_by_arrival_time(array, n);
