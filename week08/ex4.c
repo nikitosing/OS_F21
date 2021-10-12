@@ -15,6 +15,8 @@ int main() {
     void* ptr;
 	struct rusage usage;
     long to_allocate = 10 * 1024 * 1024;
+	getrusage(RUSAGE_SELF, &usage);
+	printf("%ld used\n", usage.ru_maxrss);
     for (int i = 0; i < 10; ++i) {
         ptr = malloc(to_allocate);
         memset(ptr, 0, to_allocate);
