@@ -19,7 +19,8 @@ int main() {
         ptr = malloc(to_allocate);
         memset(ptr, 0, to_allocate);
         printf("%d MB allocated\n", (i+1)*10);
-		printf("%d used", getrusage(RUSAGE_SELF, &usage));
+		getrusage(RUSAGE_SELF, &usage)
+		printf("%l used\n", usage.ru_ixrss);
         sleep(1);
     }
     return 0;
