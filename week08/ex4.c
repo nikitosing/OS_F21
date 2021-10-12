@@ -20,7 +20,7 @@ int main() {
         memset(ptr, 0, to_allocate);
         printf("%d MB allocated\n", (i+1)*10);
 		getrusage(RUSAGE_SELF, &usage);
-		printf("%ld used\n", usage.ru_ixrss);
+		printf("%ld used\n", usage.ru_maxrss);
         sleep(1);
     }
     return 0;
