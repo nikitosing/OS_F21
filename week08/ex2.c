@@ -11,7 +11,7 @@ int main() {
         ptr = malloc(to_allocate);
         memset(ptr, 0, to_allocate);
         printf("%d MB allocated", (i+1)*10);
-        sleep(1000);
+        sleep(1);
     }
     return 0;
 }
