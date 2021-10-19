@@ -1,0 +1,7 @@
+If we want to increase amount of hits we can constract such sequence:
+1, 2, 3, ... n, 1, 2, 3, ... n ... | where n is number of page frames.
+hits will be in 100% times (discount the first n references, when the memory are free at all), as we have number of pages is equal to n and we don't need to release any referenced page from memory.
+
+If we want to decrease amount of hits:
+1, 2, 3, ... n, n+1, n+2, ... 2n,     1, 2, 3, ... n, n+1, n+2, ... 2n ... | where n is number of page frames.
+hits will be 0%. As we have only n page frames, but 2n different pages references.
