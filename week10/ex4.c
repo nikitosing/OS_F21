@@ -35,7 +35,7 @@ int main(){
 				}
 				if (!flag){
 					file_groups[count].id = dp->d_ino;
-					file_groups[count].names = strdup(dp->d_name)
+					file_groups[count].names = strdup(dp->d_name);
 					strcat(file_groups[count].names, " - ");
 					count ++;
 				}
