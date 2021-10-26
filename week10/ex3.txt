@@ -1,0 +1,17 @@
+nikitosing@DESKTOP-FDHF9KR:~/OS_F21/week10$ echo "Nikita Pozdniakov" > _ex3.txt
+nikitosing@DESKTOP-FDHF9KR:~/OS_F21/week10$ chmod a-x _ex3.txt
+nikitosing@DESKTOP-FDHF9KR:~/OS_F21/week10$ ls -l _ex3.txt
+-rw-r--r-- 1 nikitosing nikitosing 18 Oct 26 20:53 _ex3.txt
+nikitosing@DESKTOP-FDHF9KR:~/OS_F21/week10$ chmod u=rwx _ex3.txt
+nikitosing@DESKTOP-FDHF9KR:~/OS_F21/week10$ chmod o=rwx _ex3.txt
+nikitosing@DESKTOP-FDHF9KR:~/OS_F21/week10$ ls -l _ex3.txt
+-rwxr--rwx 1 nikitosing nikitosing 18 Oct 26 20:53 _ex3.txt
+nikitosing@DESKTOP-FDHF9KR:~/OS_F21/week10$ chmod g=rwx _ex3.txt
+nikitosing@DESKTOP-FDHF9KR:~/OS_F21/week10$ ls -l _ex3.txt
+-rwxrwxrwx 1 nikitosing nikitosing 18 Oct 26 20:53 _ex3.txt
+
+
+         rwx rwx rwx		
+6 6 0 -> 110 110 000 -> user: read/write permissions, group: read/write, others: no permissions
+7 7 5 -> 111 111 101 -> user: read/write/execute, group: read/write/execute, others: read/execute
+7 7 7 -> 111 111 111 -> user, group, others: read/write/execute
