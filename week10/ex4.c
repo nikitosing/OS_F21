@@ -6,12 +6,12 @@
 #include <sys/dir.h>
 
 int main(){
-	DIR* dirp = opendir("./tmp");
+	DIR* dirp = opendir("tmp");
 	if (dirp == NULL){ 
 		return 0;
 	}
 	struct dirent* dp;
-	while ((dp = readdir(dirp)) != NULL ) {
+	while ((dp = readdir(dirp)) != NULL) {
 		struct stat de_stat;
 		stat(dp->d_name, &de_stat);
 		if (de_stat.st_nlink > 0) {
