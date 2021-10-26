@@ -32,6 +32,7 @@ int main(){
 				if (file_groups[i].id == dp->d_ino) {
 					flag = 1;
 					strcat(file_groups[i].names, dp->d_name);
+					printf("123 %s\n", file_groups[i].names);
 					break;
 				}
 			}
@@ -40,6 +41,7 @@ int main(){
 				file_groups[count].names = strdup(dp->d_name);
 				strcat(file_groups[count].names, " - ");
 				count ++;
+				printf("345 %s\n", file_groups[count].names);
 			}
 			printf("%lu %lu %s\n", dp->d_ino, de_stat.st_nlink, dp->d_name);
 		}
