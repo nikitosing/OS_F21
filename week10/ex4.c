@@ -14,8 +14,8 @@ int main(){
 	while ((dp = readdir(dirp)) != NULL ) {
 		struct stat de_stat;
 		stat(dp->d_name, &de_stat);
-		if (de_stat.st_nlink > 1) {
-			printf("%d %d %s", dp->d_ino, de_stat.st_nlink, dp->d_name);
+		if (de_stat.st_nlink > 0) {
+			printf("%d %d %s\n", dp->d_ino, de_stat.st_nlink, dp->d_name);
 		}
 	}
 	(void) closedir(dirp);
