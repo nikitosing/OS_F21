@@ -9,7 +9,7 @@
 
 struct node_group{
 	int id;
-	char names[];
+	char names[] = "";
 };
 
 int main(){
@@ -35,7 +35,7 @@ int main(){
 				}
 				if (!flag){
 					file_groups[count].id = dp->d_ino;
-					file_groups[count].names = dp->d_name;
+					strcat(file_groups[count].names, dp->d_name);
 					strcat(file_groups[count].names, " - ");
 					count ++;
 				}
