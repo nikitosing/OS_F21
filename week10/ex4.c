@@ -47,7 +47,7 @@ int main(){
 		}
 	}
 	for (int i = 0; i < count; i++){
-		printf("%s\n", file_groups[count].names);
+		printf("%s\n", file_groups[i].names);
 	}		
 	(void) closedir(dirp);
 	return 0;
