@@ -14,7 +14,7 @@ int main(){
 	struct dirent* dp;
 	while ((dp = readdir(dirp)) != NULL) {
 		struct stat de_stat;
-		char[] fname = "./tmp/";
+		char fname[] = "./tmp/";
 		strcat(fname, *dp->d_name);
 		stat(fname, &de_stat);
 		if (de_stat.st_nlink > 0) {
