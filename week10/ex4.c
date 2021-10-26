@@ -1,8 +1,12 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <dirent.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/dir.h>
 
 int main(){
-	dirp = opendir("tmp");
+	DIR	= opendir("tmp");
 	if (dirp == NULL){ 
 		return 0;
 	}
