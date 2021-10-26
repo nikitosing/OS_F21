@@ -9,7 +9,7 @@
 
 struct node_group{
 	int id;
-	char *names = "";
+	char *names;
 };
 
 int main(){
