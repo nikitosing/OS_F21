@@ -32,13 +32,14 @@ int main(){
 				if (file_groups[i].id == dp->d_ino) {
 					flag = 1;
 					strcat(file_groups[i].names, dp->d_name);
+					break;
 				}
-				if (!flag){
-					file_groups[count].id = dp->d_ino;
-					file_groups[count].names = strdup(dp->d_name);
-					strcat(file_groups[count].names, " - ");
-					count ++;
-				}
+			}
+			if (!flag){
+				file_groups[count].id = dp->d_ino;
+				file_groups[count].names = strdup(dp->d_name);
+				strcat(file_groups[count].names, " - ");
+				count ++;
 			}
 			printf("%lu %lu %s\n", dp->d_ino, de_stat.st_nlink, dp->d_name);
 		}
