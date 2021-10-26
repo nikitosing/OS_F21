@@ -3,13 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/resource.h>
-/*
-The only thing was changed during the execution time is a free memory in `vmstat` info. `si` and `so` are 0.
-*/
 
-/*
-If we are looking at the output of `top`. We can see, that VIRT and RES for our proccess grow as fast as program alocating new memory
-*/
 
 int main() {
     void* ptr;
