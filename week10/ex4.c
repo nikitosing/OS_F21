@@ -5,12 +5,12 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <sys/dir.h>
+#define N 1024
 
 struct node_group{
 	int id;
 	char names[];
-}
-#define N 1024
+};
 
 int main(){
 	struct node_group file_groups[N];
