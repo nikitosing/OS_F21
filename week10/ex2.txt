@@ -1,0 +1,17 @@
+nikitosing@DESKTOP-FDHF9KR:~/OS_F21/week10$ echo "Nikita Pozdniakov" > ../week01/file.txt
+nikitosing@DESKTOP-FDHF9KR:~/OS_F21/week10$ ls
+_ex1.txt  _ex1_1.txt  _ex1_2.txt  ex1.sh  ex1.txt
+nikitosing@DESKTOP-FDHF9KR:~/OS_F21/week10$ cd ../week01
+nikitosing@DESKTOP-FDHF9KR:~/OS_F21/week01$ ls
+ex1.txt  ex2.txt  ex3.sh  ex4  file.txt  main.c  total_history.txt
+nikitosing@DESKTOP-FDHF9KR:~/OS_F21/week01$ cd ../week10
+nikitosing@DESKTOP-FDHF9KR:~/OS_F21/week10$ link ../week01/file.txt _ex2.txt
+nikitosing@DESKTOP-FDHF9KR:~/OS_F21/week10$ ls -i _ex2.txt
+152616 _ex2.txt
+nikitosing@DESKTOP-FDHF9KR:~/OS_F21/week10$ ls -i ../week01/file.txt
+152616 ../week01/file.txt
+nikitosing@DESKTOP-FDHF9KR:~/OS_F21/week10$ find ../week01/file.txt -inum 152616
+../week01/file.txt
+nikitosing@DESKTOP-FDHF9KR:~/OS_F21/week10$ find ../week01/file.txt -inum 152616 -exec rm {} \;
+nikitosing@DESKTOP-FDHF9KR:~/OS_F21/week10$ find ../week01/file.txt -inum 152616
+find: ‘../week01/file.txt’: No such file or directory
