@@ -14,11 +14,10 @@ int main(){
 	struct dirent* dp;
 	while ((dp = readdir(dirp)) != NULL) {
 		struct stat de_stat;
-		printf("%s\n", dp->d_name);
 		char fname[] = "./tmp/";
 		strcat(fname, dp->d_name);
 		stat(fname, &de_stat);
-		if (de_stat.st_nlink > 0) {
+		if (de_stat.st_nlink > 1) {
 			printf("%lu %lu %s\n", dp->d_ino, de_stat.st_nlink, dp->d_name);
 		}
 	}
