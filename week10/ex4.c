@@ -10,6 +10,7 @@
 struct node_group{
 	int id;
 	char *names;
+	int count;
 };
 
 int main(){
@@ -32,7 +33,7 @@ int main(){
 				if (file_groups[i].id == dp->d_ino) {
 					flag = 1;
 					strcat(file_groups[i].names, dp->d_name);
-					printf("123 %s\n", file_groups[i].names);
+					file_groups[count].count ++;
 					break;
 				}
 			}
@@ -41,9 +42,8 @@ int main(){
 				file_groups[count].names = strdup(dp->d_name);
 				strcat(file_groups[count].names, " - ");
 				count ++;
-				printf("345 %s\n", file_groups[count].names);
+				file_groups[count].count = 0;
 			}
-			printf("%lu %lu %s\n", dp->d_ino, de_stat.st_nlink, dp->d_name);
 		}
 	}
 	for (int i = 0; i < count; i++){
