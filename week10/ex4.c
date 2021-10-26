@@ -33,7 +33,7 @@ int main(){
 				if (file_groups[i].id == dp->d_ino) {
 					flag = 1;
 					strcat(file_groups[i].names, dp->d_name);
-					file_groups[count].count ++;
+					file_groups[count].count=1;
 					break;
 				}
 			}
