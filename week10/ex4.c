@@ -12,8 +12,10 @@ int main(){
 	}
 	struct dirent* dp;
 	while ((dp = readdir(dirp)) != NULL ) {
-		if (dp->st_nlink > 1) {
-			printf("%d %d %s", dp->st_ino, dp->st_nlink, dp->d_name);
+		struct stat de_stat;
+		stat(dp->d_name, &dir_entry_stat);
+		if (de_stat->st_nlink > 1) {
+			printf("%d %d %s", dp->d_ino, de_stat->st_nlink, dp->d_name);
 		}
 	}
 	(void) closedir(dirp);
