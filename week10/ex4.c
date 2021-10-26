@@ -6,12 +6,12 @@
 #include <sys/dir.h>
 
 int main(){
-	DIR	= opendir("tmp");
+	DIR* dirp = opendir("tmp");
 	if (dirp == NULL){ 
 		return 0;
 	}
-	len = strlen(name);
-	while (( dp = readdir(dirp)) != NULL ) {
+	struct dirent* dp
+	while ((dp = readdir(dirp)) != NULL ) {
 		if (dp->st_nlink > 1) {
 			printf("%d %d %s", dp->st_ino, dp->st_nlink, dp->d_name);
 		}
