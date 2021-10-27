@@ -1,0 +1,2 @@
+nikitosing@DESKTOP-FDHF9KR:~/OS_F21/week10$ ./a.out
+file1 - link1
