@@ -1,5 +1,7 @@
 #include <stdlib.h>
 #include <linux/input.h>
+#include <fcntl.h>
+#include <stdio.h>
 
 int main(){
 	const char* file = "/dev/input/by-path/platform-i8042-serio-0-event-kbd";
